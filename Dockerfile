@@ -18,7 +18,7 @@ LABEL org.label-schema.build-date=${BUILD_DATE} \
     org.label-schema.url="http://emqx.io" \
     org.label-schema.vcs-ref=${BUILD_REF} \
     org.label-schema.vcs-type="Git" \
-    org.label-schema.vcs-url="https://github.com/emqx/emqx-docker" \
+    org.label-schema.vcs-url="https://github.com/17204105/emqx-docker" \
     maintainer="Raymond M Mouthaan <raymondmmouthaan@gmail.com>, Huang Rui <vowstar@gmail.com>, EMQ X Team <support@emqx.io>"
 
 COPY start.sh tmp/qemu-$QEMU_ARCH-stati* /usr/bin/

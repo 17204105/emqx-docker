@@ -79,7 +79,7 @@ package_build() {
     -e "EMQX_NAME=${EMQX_NAME}" \
     -e "DEPLOY=${EMQX_DELOPY}" \
     emqx/build-env:alpine3.8-${ARCH} \
-    /bin/bash -c "git clone -b $EMQX_VERSION https://github.com/emqx/emqx-rel.git /emqx_rel \
+    /bin/bash -c "git clone -b $EMQX_VERSION https://github.com/17204105/emqx-rel.git /emqx_rel \
     && cd /emqx_rel \
     && make distclean \
     && git checkout relx \
@@ -156,7 +156,7 @@ docker_test() {
      docker run -i --rm --network=host  python:3.7.2-alpine3.8 \
      sh -c "sed -i 's/dl-cdn.alpinelinux.org/mirrors.ustc.edu.cn/g' /etc/apk/repositories \
      && apk update && apk add git \
-     && git clone -b master https://github.com/emqx/paho.mqtt.testing.git \
+     && git clone -b master https://github.com/17204105/paho.mqtt.testing.git \
      && cd paho.mqtt.testing/ \
      && python interoperability/client_test5.py"
      docker rm -f test-${ARCH}
